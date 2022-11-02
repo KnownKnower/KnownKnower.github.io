@@ -7,10 +7,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <link rel="stylesheet" href="./css/index.css" />
+  <script src="js/index.js"></script>
 </head>
 
 <body>
-  <p>Hello, World!</p>
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Home button -->
+    <button
+      id="homeButton"
+      onmouseover="buttonHover('homeButton', 'homeButtonImage')"
+      onmouseout="buttonUnhover('homeButton', 'homeButtonImage')"
+    >
+      <img src="./img/Home.png" id="homeButtonImage" />
+    </button>
+
+    <!-- Title/Header -->
+    <h1 id="title">HTML/CSS/JS Guidebook</h1>
+
+    <!-- Dropdown container -->
+    <div id="dropdown">
+      <button
+        id="dropdownButton"
+        onmouseover="buttonHover('dropdownButton', 'dropdownButtonImage')"
+        onmouseout="buttonUnhover('dropdownButton', 'dropdownButtonImage')"
+        onclick="toggleDropdown()"
+      >
+        <img src="./img/Dropdown.png" id="dropdownButtonImage" />
+      </button>
+
+      <ul id="dropdownList">
+        <li
+          onmouseover="buttonHover('homeLi')"
+          onmouseout="buttonUnhover('homeLi')"
+          onclick="window.location.href = './index.html'"
+          id="homeLi"
+        >Home</li>
+        <li
+          onmouseover="buttonHover('lessonsLi')"
+          onmouseout="buttonUnhover('lessonsLi')"
+          onclick="window.location.href = './lessons.html'"
+          id="lessonsLi"
+        >Lessons</li>
+        <li
+          onmouseover="buttonHover('historyLi')"
+          onmouseout="buttonUnhover('historyLi')"
+          onclick="window.location.href = './history.html'"
+          id="historyLi"
+        >History</li>
+        <li
+          onmouseover="buttonHover('applicationsLi')"
+          onmouseout="buttonUnhover('applicationsLi')"
+          onclick="window.location.href = './applications.html'"
+          id="applicationsLi"
+        >Examples & Guidance</li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Holds HTML, CSS, & JS logo -->
+    <section id="logoContainer">
+      <img src="./img/HtmlLogo.svg" />
+      <img src="./img/CssLogo.svg" />
+      <img src="./img/JsLogo.svg" />
+    </section>
+  </main>
 </body>
 
 </html>
