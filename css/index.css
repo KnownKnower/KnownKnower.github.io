@@ -28,16 +28,29 @@ ul {
   margin: 0; padding: 0;
 }
 
-h1 {
+p, h1, h2 {
   white-space: none;
   margin: 0; padding: 0;
-  font-family: "Roboto Bold";
   color: #101010;
+}
+
+h1, h2 {
+  font-family: "Roboto Bold";
   user-select: none;
 }
 
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #000080;
+}
+a:visited {
+  color: purple;
+}
+
 /* Navigation bar */
-nav {
+header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +58,7 @@ nav {
   border-bottom: 3px solid #101010;
 }
 /* Navigation bar buttons */
-nav button {
+header button {
   background: none; outline: none; border: none;
   display: flex;
   justify-content: center;
@@ -54,7 +67,7 @@ nav button {
   border-radius: 10px;
   position: absolute;
 }
-nav button > img {
+header button > img {
   width: 50px; height: 50px;
 }
 #homeButton {
@@ -64,7 +77,7 @@ nav button > img {
   top: 5px; right: 5px;
 }
 /* Title/Header */
-nav > h1 {
+header > h1 {
   font-size: 35px;
   position: absolute;
 }
@@ -86,12 +99,61 @@ main {
   width: 100%; height: calc(100% - 64px);
   position: fixed; bottom: 0;
   z-index: -9999;
+  text-align: center;
+  overflow-y: auto;
 }
 
-#logoContainer > img {
-  width: auto; height: 500px;
+#logoContainer {
+  width: 60%;
+  display: inline-block;
+}
+#logoContainer img {
+  width: 32%; height: auto;
+  padding: 20px;
+}
+
+#italicizedHeader {
+  font-family: "Roboto Italic";
+  font-size: 30px;
+  padding: 20px;
+}
+
+#aboutWebDevelopment {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+#aboutWebDevelopment img {
+  width: 400px; height: 400px;
+  border-radius: 10px;
+}
+#aboutWebDevelopment p {
+  width: 500px; height: auto;
+  font-size: 22px;
+  padding: 20px;
+}
+
+#citation {
+  padding: 20px 10px;
+  padding-top: 40px;
+}
+#citation p {
+  font-family: "Roboto Italic";
+  font-size: 20px;
+}
+#citation div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+}
+#citation div > a {
+  padding: 5px 10px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 650px) {
-  nav > h1 { display: none; }
+  header > h1 { display: none; }
 }
