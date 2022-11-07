@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Lesson 2: CSS</title>
+  <meta chartset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/lessons.css" />
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <!-- Navigation/topbar -->
+  <header>
+    <!-- Home button -->
+    <button
+      id="homeButton"
+      onmouseover="buttonHover('homeButton', 'homeButtonImage')"
+      onmouseout="buttonUnhover('homeButton', 'homeButtonImage')"
+      onclick="window.location.href='./index.html'"
+    >
+      <img src="./img/Home.png" id="homeButtonImage" />
+    </button>
+
+    <!-- Title/Header -->
+    <h1 id="title">Lesson 2: CSS</h1>
+
+    <!-- Dropdown container -->
+    <div id="dropdown">
+      <button
+        id="dropdownButton"
+        onmouseover="buttonHover('dropdownButton', 'dropdownButtonImage')"
+        onmouseout="buttonUnhover('dropdownButton', 'dropdownButtonImage')"
+        onclick="toggleDropdown()"
+      >
+        <img src="./img/Dropdown.png" id="dropdownButtonImage" />
+      </button>
+
+      <ul id="dropdownList">
+        <li
+          onmouseover="buttonHover('homeLi')"
+          onmouseout="buttonUnhover('homeLi')"
+          onclick="window.location.href = './index.html'"
+          id="homeLi"
+        >Home</li>
+        <li
+          onmouseover="buttonHover('lessonsLi')"
+          onmouseout="buttonUnhover('lessonsLi')"
+          onclick="window.location.href = './lessons.html'"
+          id="lessonsLi"
+        >Lessons</li>
+        <li
+          onmouseover="buttonHover('historyLi')"
+          onmouseout="buttonUnhover('historyLi')"
+          onclick="window.location.href = './history.html'"
+          id="historyLi"
+        >History</li>
+        <li
+          onmouseover="buttonHover('applicationsLi')"
+          onmouseout="buttonUnhover('applicationsLi')"
+          onclick="window.location.href = './applications.html'"
+          id="applicationsLi"
+        >Examples &#38; Guidance</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1.1 -->
+    <section class="lessonInfoBox">
+      <div class="pictureBox">
+        <img src="./img/CSSStyling.png" />
+        <p class="italic">Basic CSS Styling</p>
+      </div>
+      <div class="explanationBox">
+        <p>1.1: <span class="regular">Learn how to style HTML pages with CSS</span></p>
+        <ul>
+          <li>CSS allows for the stylization of HTML pages</li>
+          <li>A tag may be modified in several ways: Changes to a tag globally, changes to a certain tag one level below another tag, changes to a certain tag anywhere within another tag, changes to an ID, or changes to a class</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 1.2 -->
+    <section class="lessonInfoBox">
+      <div class="pictureBox">
+        <img src="./img/CSSPsuedoClass.png" />
+        <p class="italic">Various pseudo classes</p>
+      </div>
+      <div class="explanationBox">
+        <p>1.2: <span class="regular">Learn what pseudo classes are</span></li>
+        <ul>
+          <li>Pseudo classes are used to modify certain attributes/events of CSS</li>
+          <li>The most common pseudo class used in CSS is probably :hover. This pseudo class modifies what happens to any HTML tag when said tag is hovered over</li>
+          <li>Pseudo classes are very useful as to create responsive websites</li>
+          <li>Pseudo classes are also very useful to modify HTML's various default settings, such as how a hyperlink (&#60;a&#62;) looks</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 1.3 -->
+    <section class="lessonInfoBox">
+      <div class="pictureBox">
+        <img src="./img/CSSNormalization.png" />
+        <p class="italic">A variatation of CSS normalization</p>
+      </div>
+      <div class="explanationBox">
+        <p>1.3: <span class="regular">Provide a template for HTML/CSS normalization</span></p>
+        <ul>
+          <li>"CSS normalization" refers to changing of some global rules in your CSS file</li>
+          <li>Normalization is used for two main reasons. First changing HTML default rules, such as &#60;body&#62; having nonzero margins. Second is to enforce consistency among different browsers when styling HTML tags</li>
+          <li><span class="bold">Caution:</span> The first normalization rule in the picture presented should not be used, as it is not good but preferential practice. Specifically, box-sizing: border-box makes it so that HTML elements with borders will not grow in size according to the border's size</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Box holding the previous & next lesson buttons -->
+    <div>
+      <button
+        class="traverseLesson"
+        onclick="window.location.href='lesson1.html'"
+      >Previous lesson</button>
+      <button
+        class="traverseLesson"
+        onclick="window.location.href='lesson3.html'"
+      >Last lesson</button>
+    </div>
+  </main>
+</body>
+
+</html>

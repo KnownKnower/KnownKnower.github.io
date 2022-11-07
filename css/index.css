@@ -10,6 +10,10 @@
   font-family: "Roboto Italic";
   src: url("../fonts/Roboto-Italic.ttf");
 }
+@font-face {
+  font-family: "Roboto Bold Italic";
+  src: url("../fonts/Roboto-BoldItalic.ttf");
+}
 
 * {
   box-sizing: border-box;
@@ -48,6 +52,12 @@ a:link {
 a:visited {
   color: purple;
 }
+
+/* Font classes */
+.regular { font-family: "Roboto Regular"; }
+.italic { font-family: "Roboto Italic"; }
+.bold { font-family: "Roboto Bold"; }
+.boldItalic { font-family: "Roboto Bold Italic"; }
 
 /* Navigation bar */
 header {
@@ -88,6 +98,7 @@ header > h1 {
   top: 71px; right: 10px;
   border: 3px solid #101010;
   font-size: 25px;
+  background: rgb(249, 230, 218);
 }
 #dropdownList > li {
   padding: 5px 10px;
@@ -101,6 +112,7 @@ main {
   z-index: -9999;
   text-align: center;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #logoContainer {
@@ -112,27 +124,43 @@ main {
   padding: 20px;
 }
 
-#italicizedHeader {
+.italicizedHeader {
   font-family: "Roboto Italic";
   font-size: 30px;
   padding: 20px;
 }
 
-#aboutWebDevelopment {
+.infoBox {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   text-align: left;
+  padding: 30px 0px;
 }
-#aboutWebDevelopment img {
-  width: 400px; height: 400px;
+.infoBox img {
+  width: 350px; height: auto;
   border-radius: 10px;
 }
-#aboutWebDevelopment p {
+.infoBox p {
   width: 500px; height: auto;
   font-size: 22px;
   padding: 20px;
+}
+/* You can use either <ul> or <p> to display information */
+.infoBox div > h2 {
+  text-align: center;
+  padding: 10px 0px;
+}
+.infoBox ul {
+  width: 350px; height: auto;
+  list-style-type: upper-roman;
+  margin-left: 50px;
+  margin-right: 20px;
+  font-size: 22px;
+}
+.infoBox li {
+  padding-bottom: 5px;
 }
 
 #citation {
@@ -156,4 +184,7 @@ main {
 
 @media screen and (max-width: 650px) {
   header > h1 { display: none; }
+}
+@media screen and (max-width: 540px) {
+  .infoBox { margin: 0; }
 }

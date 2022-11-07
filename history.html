@@ -7,9 +7,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/index.css" />
+  <script src="./js/index.js"></script>
 </head>
 
 <body>
+  <!-- Navigation/topbar -->
+  <header>
+    <!-- Home button -->
+    <button
+      id="homeButton"
+      onmouseover="buttonHover('homeButton', 'homeButtonImage')"
+      onmouseout="buttonUnhover('homeButton', 'homeButtonImage')"
+      onclick="window.location.href='./index.html'"
+    >
+      <img src="./img/Home.png" id="homeButtonImage" />
+    </button>
+
+    <!-- Title/Header -->
+    <h1 id="title">History of Web Development</h1>
+
+    <!-- Dropdown container -->
+    <div id="dropdown">
+      <button
+        id="dropdownButton"
+        onmouseover="buttonHover('dropdownButton', 'dropdownButtonImage')"
+        onmouseout="buttonUnhover('dropdownButton', 'dropdownButtonImage')"
+        onclick="toggleDropdown()"
+      >
+        <img src="./img/Dropdown.png" id="dropdownButtonImage" />
+      </button>
+
+      <ul id="dropdownList">
+        <li
+          onmouseover="buttonHover('homeLi')"
+          onmouseout="buttonUnhover('homeLi')"
+          onclick="window.location.href = './index.html'"
+          id="homeLi"
+        >Home</li>
+        <li
+          onmouseover="buttonHover('lessonsLi')"
+          onmouseout="buttonUnhover('lessonsLi')"
+          onclick="window.location.href = './lessons.html'"
+          id="lessonsLi"
+        >Lessons</li>
+        <li
+          onmouseover="buttonHover('historyLi')"
+          onmouseout="buttonUnhover('historyLi')"
+          onclick="window.location.href = './history.html'"
+          id="historyLi"
+        >History</li>
+        <li
+          onmouseover="buttonHover('applicationsLi')"
+          onmouseout="buttonUnhover('applicationsLi')"
+          onclick="window.location.href = './applications.html'"
+          id="applicationsLi"
+        >Examples &#38; Guidance</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="infoBox">
+      <img src="./img/WWWLogo.svg" />
+      <div>
+        <h2>Aug 1991 ~ First Website</h2>
+        <ul>
+          <li>Tim Berners-Lee creates <a href="info.cern.ch">info.cern.ch</a></li>
+          <li>Officially speaking, the WWW (World Wide Web) is created; the internet is online</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="infoBox">
+      <div>
+        <h2>Dec 1991 ~ WWW Expands</h2>
+        <ul>
+          <li>First webserver outside of Europe is created</li>
+          <li>This webserver is located at Stanford Linear Accelerator Center (SLAC) in California</li>
+        </ul>
+      </div>
+      <img src="./img/SLAC.jpg" />
+    </section>
+
+    <section class="infoBox">
+      <img src="./img/w3cLogo.svg" />
+      <div>
+        <h2>Oct 1994 ~ W3C Created</h2>
+        <ul>
+          <li>Tim Berners-Lee creates the W3C consortium</li>
+          <li>W3C consortium is critical to the stability of the internet, as it's the organization that pushes for international WWW standards</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="infoBox">
+      <div>
+        <h2>Oct 2004 ~ Web 2.0</h2>
+        <ul>
+          <li>Darcy DiNucci creates web 2.0</li>
+          <li>Web 2.0 is labelled as the interactive web, compared to web 1.0 being labelled the read-only web</li>
+          <li>Greater interactivity for users is reached, will we see web 3.0?</li>
+        </ul>
+      </div>
+      <img src="./img/Web2.0.jpg" />
+    </section>
+
+    <!-- Citation -->
+    <section id="citation">
+      <p>Citation</p>
+      <div>
+        <a href="https://home.cern/science/computing/birth-web/short-history-web#:~:text=Where%20the%20Web%20was%20born,and%20institutes%20around%20the%20world.">1</a>
+        <a href="https://www.svgrepo.com/svg/130546/world-wide-web">2</a>
+        <a href="https://en.wikipedia.org/wiki/SLAC_National_Accelerator_Laboratory#/media/File:SLAC_aerial.jpg">3</a>
+        <a href="https://www.w3.org/Icons/w3c_home">4</a>
+        <a href="https://technologyforlearners.com/wp-content/uploads/2015/06/Web_2.jpg">5</a>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

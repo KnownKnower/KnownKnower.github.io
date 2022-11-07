@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Lesson 3: JS</title>
+  <meta chartset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/lessons.css" />
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <!-- Navigation/topbar -->
+  <header>
+    <!-- Home button -->
+    <button
+      id="homeButton"
+      onmouseover="buttonHover('homeButton', 'homeButtonImage')"
+      onmouseout="buttonUnhover('homeButton', 'homeButtonImage')"
+      onclick="window.location.href='./index.html'"
+    >
+      <img src="./img/Home.png" id="homeButtonImage" />
+    </button>
+
+    <!-- Title/Header -->
+    <h1 id="title">Lesson 3: JavaScript</h1>
+
+    <!-- Dropdown container -->
+    <div id="dropdown">
+      <button
+        id="dropdownButton"
+        onmouseover="buttonHover('dropdownButton', 'dropdownButtonImage')"
+        onmouseout="buttonUnhover('dropdownButton', 'dropdownButtonImage')"
+        onclick="toggleDropdown()"
+      >
+        <img src="./img/Dropdown.png" id="dropdownButtonImage" />
+      </button>
+
+      <ul id="dropdownList">
+        <li
+          onmouseover="buttonHover('homeLi')"
+          onmouseout="buttonUnhover('homeLi')"
+          onclick="window.location.href = './index.html'"
+          id="homeLi"
+        >Home</li>
+        <li
+          onmouseover="buttonHover('lessonsLi')"
+          onmouseout="buttonUnhover('lessonsLi')"
+          onclick="window.location.href = './lessons.html'"
+          id="lessonsLi"
+        >Lessons</li>
+        <li
+          onmouseover="buttonHover('historyLi')"
+          onmouseout="buttonUnhover('historyLi')"
+          onclick="window.location.href = './history.html'"
+          id="historyLi"
+        >History</li>
+        <li
+          onmouseover="buttonHover('applicationsLi')"
+          onmouseout="buttonUnhover('applicationsLi')"
+          onclick="window.location.href = './applications.html'"
+          id="applicationsLi"
+        >Examples &#38; Guidance</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="lessonInfoBox">
+      <div class="pictureBox">
+        <img src="./img/JSPrimer.png" id="JSPrimer" />
+        <p class="italic">JavaScript primer</p>
+      </div>
+      <div class="explanationBox">
+
+        <p>1.1: <span class="regular">Provide the basics to JavaScript</span></li>
+
+        <ul>
+          <li>Functions: a reusable block of code. Functions are used for a variety of reasons such as returning a value to set a variable as (return x + y), assigning functions for HTML element events, etc</li>
+          <li>Variable: A value that may be intitialized with any datatype (integer, string, etc)</li>
+          <li>Listener: Also called a window listener, anytime that said event (i.e. "click", "keydown", "keyup", etc) is triggered, the <span class="bold">callback function</span> is called</li>
+        </ul>
+
+        <p>1.2: <span class="regular">Learn how to select and modify IDs and classes</span></p>
+
+        <ul>
+          <li>In JavaScript, the main way to select an HTML element on the page is through it's ID or class name</li>
+          <li>Elements selected using the above function may also be stored in a variable</li>
+          <li>Elements are stored as an object, an object is a datatype in JavaScript with multiple other attributes attached to it</li>
+          <li>Modifying an element is done by selecting an object's attribute. An example is <span class="italic">var.style.display = "none";</span>. Normally, editting the CSS of an element is done with an object's <span class="italic">style</span> attribute</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="lessonInfoBox">
+      <div class="pictureBox">
+        <img src="./img/JSOnClick.png" id="JSPrimer" />
+        <p class="italic">Attaching functions to HTML elements</p>
+      </div>
+      <div class="explanationBox">
+        <p>1.3: <span class="regular">Learn how to add functions to HTML elements for certain events</span><p>
+        <ul>
+          <li>Code can be directly inserted to HTML elements in an HTML document</li>
+          <li>For various element events, i.e. <span class="italic">onclick</span>, you may insert a JavaScript code within event quotations as shown</li>
+          <li>This creates an extensible and creative way to create code, as for example, most elements in HTML don't have a onclick implementation already (like &#60;a&#62;)</li>
+        </ul>
+      </div>
+    </section>
+
+    <button
+      class="traverseLesson"
+      onclick="window.location.href='lesson2.html'"
+    >Previous lesson</button>
+  </main>
+</body>
+
+</html>

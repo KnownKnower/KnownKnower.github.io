@@ -1,0 +1,68 @@
+/* Used in lesson1.html, lesson2.html, & lesson3.html */
+.lessonInfoBox {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 20px 5px;
+}
+
+.pictureBox {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.pictureBox > img {
+  width: 350px; height: auto;
+  border-radius: 10px;
+}
+.pictureBox > p {
+  padding-top: 5px;
+}
+
+.explanationBox {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.explanationBox > p {
+  text-align: center;
+  font-family: "Roboto Bold";
+  font-size: 26px;
+  padding: 10px 0px;
+}
+.explanationBox > ul {
+  max-width: 800px;
+  margin-left: 40px;
+  list-style-type: upper-roman;
+  font-size: 22px;
+}
+.explanationBox > ul > li {
+  padding-bottom: 5px;
+}
+
+.traverseLesson {
+  background: none; outline: none;
+  border: 3px solid #101010;
+  font-family: "Roboto Regular";
+  font-size: 25px;
+  color: #101010;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+.traverseLesson:hover {
+  background: #101010;
+  color: rgb(249, 230, 218);
+}
+
+#JSPrimer {
+  width: 800px; height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  #JSPrimer { width: 350px; height: auto; }
+}

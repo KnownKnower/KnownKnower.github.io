@@ -3,12 +3,13 @@
 <html>
 
 <head>
-  <title>Lessons</title>
+  <title>Lesson 1: HTML</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/lessons.css" />
   <script src="./js/index.js"></script>
-</body>
+</head>
 
 <body>
   <!-- Navigation/topbar -->
@@ -24,7 +25,7 @@
     </button>
 
     <!-- Title/Header -->
-    <h1 id="title">Intro to HTML/CSS/JS Lessons</h1>
+    <h1 id="title">Lesson 1: HTML</h1>
 
     <!-- Dropdown container -->
     <div id="dropdown">
@@ -67,59 +68,46 @@
   </header>
 
   <main>
-    <!-- Holds screenshots of HTML, CSS, & JS code -->
-    <section id="logoContainer">
-      <img src="./img/HTMLCode.png" />
-      <img src="./img/CSSCode.png" />
-      <img src="./img/JSCode.png" />
-    </section>
-
-    <p class="italicizedHeader">This site offers <span class="boldItalic">3 lessons</span> to help get you started</p>
-
-    <section class="infoBox">
-      <img src="./img/HtmlLogo.svg" />
-      <div>
-        <h2><a href="lesson1.html">Lesson 1: HTML</a></h2>
+    <!-- 1.1 -->
+    <section class="lessonInfoBox">
+      <div class="pictureBox">
+        <img src="./img/HTMLTemplate.png" />
+        <p class="italic">Basic HTML Document</p>
+      </div>
+      <div class="explanationBox">
+        <p>1.1: <span class="regular">Learn how to create an HTML document</span></p>
         <ul>
-          <li>Learn how to create an HTML document</li>
-          <li>Learn how to use HTML tags</li>
+          <li>&#60;!DOCTYPE html&#62; is included at the top of the page to indicate that the document is written in HTML</li>
+          <li>HTML documents are always enclosed in &#60;html&#62;, which always should contain a &#60;head&#62; &#38; &#60;body&#62; tags</li>
+          <li>The &#60;head&#62; tag is where: CSS &#38; JS files are imported, lots of SEO optimization is done, and other components such as the title of the page (what is displayed on a browser tab title)</li>
+          <li>The &#60;body&#62; tag is where HTML tags are placed to create the UI</li>
+          <li>Every HTML document has a .html or .htm extension</li>
         </ul>
       </div>
     </section>
 
-    <section class="infoBox">
-      <img src="./img/CssLogo.svg" />
-      <div>
-        <h2><a href="lesson2.html">Lesson 2: CSS</a></h2>
+    <!-- 1.2 -->
+    <section class="lessonInfoBox">
+      <div class="pictureBox">
+        <img src="./img/HTMLTags.png" />
+        <p class="italic">Several HTML 'tags'</p>
+      </div>
+      <div class="explanationBox">
+        <p>1.2: <span class="regular">Learn how to use HTML tags</span></p>
         <ul>
-          <li>Learn how to style HTML pages with CSS</li>
-          <li>Learn what CSS psuedo-classes are</li>
-          <li>Provide a template for HTML/CSS normalization</li>
+          <li>There are about 100 tags in HTML</li>
+          <li>You don't need to use various tags, but it is good practice</li>
+          <li>Examples of tags include: &#60;p&#62;, &#60;a&#62;, &#60;html&#62;, and &#60;script&#62;</li>
+          <li>An important element to what makes a good HTML artist is the use of tags, and overall the avoidance of the &#60;div&#62; tag</li>
         </ul>
       </div>
     </section>
 
-    <section class="infoBox">
-      <img src="./img/JsLogo.svg" />
-      <div>
-        <h2><a href="lesson3.html">Lesson 3: JS</a></h2>
-        <ul>
-          <li>Provide the basics to JavaScript</li>
-          <li>Learn how to select and modify IDs and classes</li>
-          <li>Learn how to add functions to HTML elements for certain events</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Citation -->
-    <section id="citation">
-      <p>Citation</p>
-      <div>
-        <a href="https://en.wikipedia.org/wiki/HTML#/media/File:HTML5_logo_and_wordmark.svg">1</a>
-        <a href="https://en.wikipedia.org/wiki/CSS#/media/File:CSS3_logo_and_wordmark.svg">2</a>
-        <a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg">3</a>
-      </div>
-    </section>
+    <!-- Button that leads to the next page -->
+    <button
+      class="traverseLesson"
+      onclick="window.location.href='lesson2.html'"
+    >Next lesson</button>
   </main>
 </body>
 
